@@ -1,15 +1,16 @@
-import { useState } from "react";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Signup from "../src/pages/Signup";
 import Login from "./pages/Login";
-import Signup from "./pages/Signup";
 
 function App() {
   return (
-    <>
-      <Login />
-      <Signup />
-     
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<div>404 Not Found</div>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

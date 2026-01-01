@@ -1,12 +1,12 @@
-import { FcGoogle } from "react-icons/fc";
+import googlelogo from "../../public/googlelogo.png";
 import { FaFacebookF } from "react-icons/fa";
 import login from "../../public/login.jpg";
 
-export default function Login() {
+export default function   Login() {
  
 
   return (
-    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2">
+    <div className="min-h-screen grid grid-cols-1 md:grid-cols-[4fr_6fr]">
       {/* LEFT SIDE - LOGIN FORM */}
       <div className="flex items-center justify-center px-6">
         <div className="w-full max-w-md">
@@ -55,21 +55,16 @@ export default function Login() {
               className="flex-1 flex items-center justify-center gap-2 
                                border py-2 rounded-md hover:bg-gray-100"
             >
-              <FcGoogle /> Google
+              <img src={googlelogo} alt="Google" className="w-5 h-5" />Google
             </button>
-            <button
-              className="flex-1 flex items-center justify-center gap-2 
-                               border py-2 rounded-md hover:bg-gray-100"
-            >
-              <FaFacebookF/> Facebook
-            </button>
+           
           </div>
 
           {/* Sign Up */}
           <p className="text-center text-sm mt-6">
             Don’t have an account?
             <a
-              href="#"
+              href="/ "
               className="text-blue-600 font-semibold ml-1 hover:underline"
             >
               Sign Up
@@ -88,14 +83,14 @@ export default function Login() {
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/1 flex items-center justify-center">
-          <div className="text-center px-10" style={{position:"relative",top:"-200px"}}>
+          <div className="text-start px-10" style={{position:"relative",top:"-px"}}>
             <h2 className="text-2xl lg:text-3xl font-semibold text-gray-400">
               The future belongs to those who <br />
               <span className="text-blue-400 font-bold">
                 believe in the beauty of their dreams.
               </span>
             </h2>
-            <p className="mt-4 text-gray/400">– Eleanor Roosevelt</p>
+            <p className="mt-4 text-gray/400" style={{marginLeft:"400px "}}>– Eleanor Roosevelt</p>
           </div>
         </div>
       </div>
